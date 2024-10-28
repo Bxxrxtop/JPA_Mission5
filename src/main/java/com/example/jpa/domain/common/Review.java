@@ -12,7 +12,11 @@ public class Review extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = true)
     private String content;
+
+    @Column(nullable = false)
     private Double score;
 
     @ManyToOne(fetch = FetchType.LAZY)

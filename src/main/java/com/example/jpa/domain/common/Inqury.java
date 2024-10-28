@@ -16,10 +16,13 @@ public class Inqury extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, length = 15)
     private String title;
 
+    @Column(nullable = true)
     private String content;
 
+    @Column(nullable = true)
     private String picture;
 
     @ManyToOne(fetch = FetchType.LAZY)
