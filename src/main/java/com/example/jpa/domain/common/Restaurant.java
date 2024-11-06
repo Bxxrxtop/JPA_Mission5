@@ -28,6 +28,9 @@ public class Restaurant {
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private List<Review> reviewList = new ArrayList<>();
 
+    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL )
+    private List<Mission> missions = new ArrayList<>();
+
     @Override
     public String toString() {
         return "Restaurant{" +

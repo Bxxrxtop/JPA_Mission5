@@ -1,4 +1,4 @@
-package com.example.jpa.repository.restaurantRepository;
+package com.example.jpa.repository.restaurant;
 
 import com.example.jpa.domain.common.Restaurant;
 import org.apache.catalina.Store;

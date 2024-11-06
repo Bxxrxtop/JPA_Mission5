@@ -1,4 +1,4 @@
-package com.example.jpa.service.restaurantService;
+package com.example.jpa.service.restaurant;
 
 import com.example.jpa.domain.common.Restaurant;
 

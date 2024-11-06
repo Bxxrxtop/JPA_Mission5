@@ -1,4 +1,4 @@
-package com.example.jpa.repository.restaurantRepository;
+package com.example.jpa.repository.restaurant;
 
 
 import com.example.jpa.domain.common.QRestaurant;
@@ -14,22 +14,22 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RestaurantRepositoryImpl implements RestaurantRepositoryCustom {
     private final JPAQueryFactory jpaQueryFactory;
-    private final QRestaurant store = QRestaurant.restaurant;
+    private final QRestaurant restaurant = QRestaurant.restaurant;
 
     @Override
     public List<Restaurant> dynamicQueryWithBooleanBuilder(String name, Double score) {
         BooleanBuilder predicate = new BooleanBuilder();
 
         if (name != null) {
-            predicate.and(store.name.eq(name));
+            predicate.and(restaurant.name.eq(name));
         }
 
         if (score != null) {
-            predicate.and(store.score.goe(4.0f));
+            predicate.and(restaurant.score.goe(4.0f));
         }
 
         return jpaQueryFactory
-                .selectFrom(store)
+                .selectFrom(restaurant)
                 .where(predicate)
                 .fetch();
     }

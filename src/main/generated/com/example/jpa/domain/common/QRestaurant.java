@@ -24,6 +24,8 @@ public class QRestaurant extends EntityPathBase<Restaurant> {
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
+    public final ListPath<Mission, QMission> missions = this.<Mission, QMission>createList("missions", Mission.class, QMission.class, PathInits.DIRECT2);
+
     public final StringPath name = createString("name");
 
     public final ListPath<Review, QReview> reviewList = this.<Review, QReview>createList("reviewList", Review.class, QReview.class, PathInits.DIRECT2);

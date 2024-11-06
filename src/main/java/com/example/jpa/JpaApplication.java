@@ -1,6 +1,6 @@
 package com.example.jpa;
 
-import com.example.jpa.service.restaurantService.RestaurantQueryService;
+import com.example.jpa.service.restaurant.RestaurantQueryService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

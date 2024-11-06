@@ -28,6 +28,19 @@ public class Mission {
     @Column(nullable = false)
     private Integer price;
 
+    @ManyToOne(fetch =  FetchType.LAZY)
+    private Restaurant restaurant;
+
     @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
     private List<UserMission> userMissionList = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Mission{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", deadline='" + deadline + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

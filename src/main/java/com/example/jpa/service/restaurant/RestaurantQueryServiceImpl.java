@@ -1,7 +1,7 @@
-package com.example.jpa.service.restaurantService;
+package com.example.jpa.service.restaurant;
 
 import com.example.jpa.domain.common.Restaurant;
-import com.example.jpa.repository.restaurantRepository.RestaurantRepository;
+import com.example.jpa.repository.restaurant.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
